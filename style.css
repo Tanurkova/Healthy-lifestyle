@@ -1,0 +1,129 @@
+
+            /* General settings */
+
+body {
+    margin: 1em auto; 
+    
+} 
+
+img{
+    display: block;
+    width: 100px;
+    height: 100px;
+}
+.menu_social ul,
+.menu_epl ul{
+    list-style: none;
+}
+
+                /* CSS Grid */
+
+.grid-container {
+    max-width: 600px;
+    background:linear-gradient(to top, rgb(247, 182, 144), rgb(247, 103, 87));
+    border-radius: 10px;
+    box-shadow: 8px 8px 6px -6px #777;
+    margin: 0 auto;
+    padding: 10px 30px;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 20% 2fr 2fr 2fr 20%;;
+    grid-template-rows: 10em auto auto 10em;
+    grid-template-areas:
+      "head head head head head"
+      "social img img img epl"
+      "social text text text epl"
+      "foot foot foot foot foot";
+  }
+
+.header{
+    grid-area: head;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    font-family: 'La Belle Aurore', cursive;
+    text-shadow: 1px 4px rgb(241, 202, 202)
+  }
+
+.menu_img{
+    grid-area: img;
+    display: flex;
+    justify-content: space-between;
+   
+  }
+
+.menu_img img{
+    border-radius: 50px 50px 5px 50px;
+    box-shadow: 8px 8px 6px -6px #777;
+    width: 80px;
+    height: 80px;
+  }
+
+
+.menu_text {
+    grid-area: text;
+    display: grid;
+    align-content: space-around;
+  
+
+}
+
+.menu_text p{
+    /* border: 1px solid black; */
+    border-radius: 35px;
+    margin: 0px auto;
+    text-align: justify;
+}
+.footer{
+    grid-area: foot;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.footer img{
+   margin: 0 12px;
+   box-shadow: 8px 8px 6px -6px #777;
+   border-radius: 5px 50px 50px 50px;
+}
+
+.menu_social{
+    grid-area: social;
+}
+
+.social{
+    display: grid;
+    align-content: space-around;
+    justify-content: start;
+    height: 100%;
+    
+
+}
+.menu_social li{
+    font-size: 30px;
+    
+   
+}
+.menu_social a{
+    color: black;
+   
+}
+
+.menu_epl{
+    grid-area: epl;
+    writing-mode: vertical-rl; 
+    margin-left: 150px;
+ 
+} 
+.epl{
+    display: flex;
+    justify-content: space-around;
+    font-family: 'La Belle Aurore', cursive;
+    font-size: 40px;
+    
+   
+    
+
+
+    
+}
